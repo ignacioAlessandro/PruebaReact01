@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-
+    import Componente from "./components/Componente"
+import Propiedades from "./components/Propiedades"
+import Estado from "./components/Estado"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <section>
+
+      <Componente msg="hola q ase"/>
+      </section>
+      <section>
+        <Propiedades 
+          cadena="esto es una cadena" 
+          numero = {20}
+          booleano = {true}  
+          arreglo = {[1,2,3]}
+          objeto={{Nombre:"ignacio", Correo:"aleesandroignacio4@gmail.com"}}
         >
-          Learn React
-        </a>
-      </header>
+        </Propiedades>
+        <hr/>
+        <div>
+          <Estado></Estado>
+        </div>
+        
+      </section>
     </div>
   );
 }
