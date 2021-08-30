@@ -1,16 +1,20 @@
 import './App.css';
-    import Componente from "./components/Componente"
+import Componente from "./components/Componente"
 import Propiedades from "./components/Propiedades"
 import Estado from "./components/Estado"
+import RenderizadoCondicional from "./components/RenderizadoCondicional"
+import RenderizadoElementos from "./components/RenderizadoElementos"
+import Eventos from "./components/Eventos"
 function App() {
   return (
     <div>
       <section>
-
-      <Componente msg="hola q ase"/>
+        <div>
+      <Componente  msg="hola q ase"/>
+        </div>
       </section>
       <section>
-        <Propiedades 
+        <Propiedades
           cadena="esto es una cadena" 
           numero = {20}
           booleano = {true}  
@@ -22,8 +26,13 @@ function App() {
         <div>
           <Estado></Estado>
         </div>
-        
+        <section><RenderizadoCondicional/></section>
       </section>
+      <div>
+          <RenderizadoElementos/>
+          <hr/>
+          <Eventos/>
+      </div>
     </div>
   );
 }
